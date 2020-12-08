@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<extra:ToastView
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:extra="clr-namespace:AiForms.Dialogs.Abstractions;assembly=AiForms.Dialogs.Abstractions"
+    xmlns:local="clr-namespace:AiFormsDialogsXF;assembly=AiFormsDialogsXF"
+    x:Class="AiFormsDialogsXF.Views.DialogViews.WarningToastView"
+    HorizontalLayoutAlignment="Fill"
+    VerticalLayoutAlignment="End"
+    OffsetY="-35"
+    OffsetX="1"
+    Duration="3000">
+    <Grid
+        ColumnDefinitions="Auto, *, Auto"
+        ColumnSpacing="10"
+        BackgroundColor="Gray"
+        Padding="15, 0">
+        <Image
+            Grid.Column="0"
+            Aspect="AspectFit"
+            WidthRequest="30"
+            HeightRequest="30"
+            Source="{local:ImageResource AiFormsDialogsXF.ImageAssets.warning_icon.png}" />
+        <Label
+            Grid.Column="1"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            FontSize="Large"
+            FontFamily="{StaticResource ComicSans}"
+            TextColor="White"
+            Text="This action is not allowed." />
+        <Image
+            Grid.Column="2"
+            Aspect="AspectFit"
+            WidthRequest="30"
+            HeightRequest="30"
+            Source="{local:ImageResource AiFormsDialogsXF.ImageAssets.warning_icon.png}" />
+    </Grid>
+</extra:ToastView>

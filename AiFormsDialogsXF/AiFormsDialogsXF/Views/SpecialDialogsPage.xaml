@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    x:Class="AiFormsDialogsXF.Views.SpecialDialogsPage"
+    ios:Page.UseSafeArea="True"
+    Title="Special Dialogs"
+    Shell.PresentationMode="Animated"
+    Shell.NavBarHasShadow="true">
+    <StackLayout
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="CenterAndExpand"
+        Spacing="15">
+        <Button
+            HorizontalOptions="FillAndExpand"
+            Margin="30, 0"
+            Padding="10"
+            BackgroundColor="Blue"
+            TextColor="White"
+            Text="OPEN SPECIAL DIALOG"
+            Clicked="OpenSpecialDialog_Clicked" />
+        <Button
+            HorizontalOptions="FillAndExpand"
+            Margin="30, 0"
+            Padding="10"
+            BackgroundColor="Blue"
+            TextColor="White"
+            Text="OPEN REYNOLDS LOADING"
+            Clicked="OpenReynoldsLoading_Clicked" />
+        <Button
+            HorizontalOptions="FillAndExpand"
+            Margin="30, 0"
+            Padding="10"
+            BackgroundColor="Blue"
+            TextColor="White"
+            Text="OPEN SPECIAL TOAST"
+            Clicked="OpenSpecialToast_Clicked" />
+    </StackLayout>
+</ContentPage>

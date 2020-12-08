@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<extra:ToastView
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:extra="clr-namespace:AiForms.Dialogs.Abstractions;assembly=AiForms.Dialogs.Abstractions"
+    x:Class="AiFormsDialogsXF.Views.DialogViews.DefaultToastDialogView"
+    HorizontalLayoutAlignment="Center"
+    VerticalLayoutAlignment="Center"
+    CornerRadius="15"
+    Duration="{Binding Duration}"
+    BackgroundColor="Gray">
+    <StackLayout
+        Padding="10">
+        <Label
+            HorizontalTextAlignment="Center"
+            FontSize="Medium"
+            TextColor="White"
+            Text="{Binding ToastText}" />
+    </StackLayout>        
+</extra:ToastView>

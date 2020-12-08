@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Shell
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:AiFormsDialogsXF.Views"
+    x:Class="AiFormsDialogsXF.AppShell">
+    <Shell.Resources>
+        <Style
+            x:Key="BaseStyle"
+            TargetType="Element">
+            <Setter
+                Property="Shell.TabBarBackgroundColor" 
+                Value="DodgerBlue" />
+            <Setter
+                Property="Shell.TabBarTitleColor" 
+                Value="White" />            
+            <Setter
+                Property="Shell.TabBarUnselectedColor" 
+                Value="Black" />
+        </Style>
+    </Shell.Resources>
+    <TabBar
+        Style="{StaticResource BaseStyle}">
+        <ShellContent
+            Title="Special Dialogs"
+            ContentTemplate="{DataTemplate views:SpecialDialogsPage}" />
+        <ShellContent
+            Title="Regular Dialogs"
+            ContentTemplate="{DataTemplate views:RegularDialogsPage}" />
+    </TabBar>
+</Shell>

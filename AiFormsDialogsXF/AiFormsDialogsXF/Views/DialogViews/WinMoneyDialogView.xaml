@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<extra:DialogView
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:extra="clr-namespace:AiForms.Dialogs.Abstractions;assembly=AiForms.Dialogs.Abstractions"
+    xmlns:local="clr-namespace:AiFormsDialogsXF;assembly=AiFormsDialogsXF"
+    x:Class="AiFormsDialogsXF.Views.DialogViews.WinMoneyDialogView"
+    VerticalLayoutAlignment="Center"
+    HorizontalLayoutAlignment="Center"
+    OffsetX="0"
+    OffsetY="0"
+    OverlayColor="#CC808080"
+    CornerRadius="15"
+    BorderColor="Black"
+    BorderWidth="2"
+    UseCurrentPageLocation="False"
+    IsCanceledOnTouchOutside="False">
+    <Frame
+        WidthRequest="200"
+        BorderColor="Black"
+        CornerRadius="14"
+        HasShadow="False"
+        Padding="0">
+        <Grid
+            RowDefinitions="Auto, Auto"
+            ColumnDefinitions="*, *"
+            Padding="15, 10"
+            BackgroundColor="White">
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HorizontalTextAlignment="Center"
+                FontSize="Large"
+                FontFamily="{StaticResource ComicSans}"
+                LineBreakMode="WordWrap"
+                TextColor="Black"
+                Text="Do you want to win 1 millon dollars right now ?" />
+            <StackLayout
+                Grid.Row="1"
+                Grid.Column="0"
+                Orientation="Horizontal">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="CancelAndClose_Tapped" />
+                </StackLayout.GestureRecognizers>
+                <Image
+                    Aspect="AspectFit"
+                    WidthRequest="30"
+                    HeightRequest="30"
+                    Source="{local:ImageResource AiFormsDialogsXF.ImageAssets.cancel.png}" />
+                <Label
+                    VerticalTextAlignment="Center"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                    Text="NO" />
+            </StackLayout>
+            <StackLayout
+                Grid.Row="1"
+                Grid.Column="1"
+                Orientation="Horizontal">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="AcceptAndClose_Tapped" />
+                </StackLayout.GestureRecognizers>
+                <Image
+                    Aspect="AspectFit"
+                    WidthRequest="30"
+                    HeightRequest="30"
+                    Source="{local:ImageResource AiFormsDialogsXF.ImageAssets.accept.png}" />
+                <Label
+                    VerticalTextAlignment="Center"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                    Text="YES!" />
+            </StackLayout>
+        </Grid>        
+    </Frame>
+</extra:DialogView>

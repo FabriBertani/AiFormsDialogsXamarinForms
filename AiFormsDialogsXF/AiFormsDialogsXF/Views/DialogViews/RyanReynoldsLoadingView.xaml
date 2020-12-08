@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<extra:LoadingView
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:extra="clr-namespace:AiForms.Dialogs.Abstractions;assembly=AiForms.Dialogs.Abstractions"
+    xmlns:local="clr-namespace:AiFormsDialogsXF;assembly=AiFormsDialogsXF"
+    x:Class="AiFormsDialogsXF.Views.DialogViews.RyanReynoldsLoadingView"
+    OffsetX="0"
+    OffsetY="0"
+    OverlayColor="#DD808080">
+    <StackLayout>
+        <Image
+            x:Name="ryanReynoldsFace"
+            WidthRequest="100"
+            HeightRequest="150"
+            Aspect="AspectFit"
+            Source="{local:ImageResource AiFormsDialogsXF.ImageAssets.ryan_reynolds_loading.png}" />
+        <Label
+            Margin="0, 10"
+            FontSize="Medium"
+            FontAttributes="Bold"
+            TextColor="White"
+            Text="I just like to look beautiful sometimes..." />
+    </StackLayout>
+</extra:LoadingView>

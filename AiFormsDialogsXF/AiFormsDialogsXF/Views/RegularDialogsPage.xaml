@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    x:Class="AiFormsDialogsXF.Views.RegularDialogsPage"
+    ios:Page.UseSafeArea="True"
+    Title="Regular Dialogs"
+    Shell.PresentationMode="Animated"
+    Shell.NavBarHasShadow="true">
+    <StackLayout
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="CenterAndExpand"
+        Spacing="15">
+        <Button
+            HorizontalOptions="FillAndExpand"
+            Margin="30, 0"
+            Padding="10"
+            BackgroundColor="Blue"
+            TextColor="White"
+            Text="OPEN REGULAR LOADING"
+            Command="{Binding OpenRegularLoadingCommand}" />
+        <Entry
+            Margin="15, 0"
+            HorizontalOptions="FillAndExpand"
+            FontSize="Medium"
+            Placeholder="Insert your custom message..."
+            PlaceholderColor="Gray"
+            TextColor="Black"
+            Text="{Binding CustomMessage}" />
+        <Button
+            HorizontalOptions="FillAndExpand"
+            Margin="30, 0"
+            Padding="10"
+            BackgroundColor="Blue"
+            TextColor="White"
+            Text="OPEN LOADING WITH CUSTOM TEXT"
+            Command="{Binding OpenLoadingWithCustomTextCommand}" />
+        <Button
+            HorizontalOptions="FillAndExpand"
+            Margin="30, 0"
+            Padding="10"
+            BackgroundColor="Blue"
+            TextColor="White"
+            Text="OPEN SPECIAL ALERT WITH CUSTOM TEXT"
+            Command="{Binding OpenDialogWithCustomTextCommand}" />
+        <Button
+            HorizontalOptions="FillAndExpand"
+            Margin="30, 0"
+            Padding="10"
+            BackgroundColor="Blue"
+            TextColor="White"
+            Text="OPEN FAKE DOWNLOAD LOADING"
+            Command="{Binding OpenFakeDownloadLoadingCommand}" />
+        <Button
+            HorizontalOptions="FillAndExpand"
+            Margin="30, 0"
+            Padding="10"
+            BackgroundColor="Blue"
+            TextColor="White"
+            Text="OPEN REGULAR TOAST" 
+            Clicked="OpenRegularToast_Clicked"/>
+    </StackLayout>
+</ContentPage>

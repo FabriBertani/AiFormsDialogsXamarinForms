@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <AssemblyName>AiFormsDialogsXF</AssemblyName>
+    <RootNamespace>AiFormsDialogsXF</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ImageAssets\accept.png" />
+    <None Remove="ImageAssets\cancel.png" />
+    <None Remove="ImageAssets\ryan_reynolds_loading.png" />
+    <None Remove="ImageAssets\warning_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="ImageAssets\ryan_reynolds_loading.png" />
+    <EmbeddedResource Include="ImageAssets\accept.png" />
+    <EmbeddedResource Include="ImageAssets\cancel.png" />
+    <EmbeddedResource Include="ImageAssets\warning_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AiForms.Dialogs" Version="1.0.10" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\SpecialDialogsPage.xaml.cs">
+      <DependentUpon>SpecialDialogsPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="AppShell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DialogViews\DefaultDialogView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DialogViews\DefaultToastDialogView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DialogViews\RyanReynoldsLoadingView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DialogViews\WarningToastView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DialogViews\WinMoneyDialogView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\RegularDialogsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
